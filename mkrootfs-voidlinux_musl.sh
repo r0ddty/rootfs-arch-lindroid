@@ -1,1 +1,0 @@
-mkrootfs-voidlinux.sh
