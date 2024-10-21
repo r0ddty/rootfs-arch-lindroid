@@ -14,7 +14,7 @@ cd $(dirname $0)
 ROOTFS=$PWD/rootfs-archlinux
 
 echo "[options]
-Architecture = auto
+Architecture = aarch64
 
 [core]
 Include = /etc/pacman.d/mirrorlist
@@ -32,10 +32,11 @@ Include = /etc/pacman.d/mirrorlist
 mkdir -p $ROOTFS
 
 pacstrap -C work/pacman.conf -KMc $ROOTFS base linux linux-firmware grub \
-	squashfs-tools xorg xorg-xinit openbox xterm pcmanfm firefox geany xarchiver \
-	tint2 dfc dunst feh gmrun lxappearance-obconf neofetch picom gparted mtools \
-	sudo ttf-liberation lxdm-gtk3 ntfs-3g polkit-gnome xdg-user-dirs xdg-utils vim \
-	networkmanager gvfs leafpad volumeicon network-manager-applet
+	squashfs-tools xorg xorg-xinit pcmanfm firefox geany \
+	tint2 dfc dunst feh gmrun lxappearance-obconf neofetch picom mtools \
+	sudo ttf-liberation ntfs-3g xdg-user-dirs xdg-utils vim \
+	networkmanager gvfs leafpad volumeicon network-manager-applet \
+	plasma-meta kde-applications-meta sddm
 	
 # this use my custom repo for aur packages
 # setup your own custom repo if you wanna add packages from aur
