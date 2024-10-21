@@ -59,3 +59,5 @@ adb shell -t lxc_create default -t lindroid -- -f /dev/fd/4 "4</sdcard/rootfs.ta
 adb shell -t lxc_attach default -- "/bin/bash -c \"source /etc/profile && exec su - root\""
 `
 where "default" is the name of your container.
+
+P.S. all the packages that are being pacstrap'd into the rootfs are in the script itself.
