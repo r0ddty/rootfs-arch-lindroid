@@ -25,9 +25,9 @@ Include = /etc/pacman.d/mirrorlist
 [community]
 Include = /etc/pacman.d/mirrorlist
 
-[customrepo]
-SigLevel = Optional TrustAll
-Server = file:///home/emmett/aur/customrepo" > work/pacman.conf
+#[customrepo]
+#SigLevel = Optional TrustAll
+#Server = file:///home/emmett/aur/customrepo" > work/pacman.conf
 
 mkdir -p $ROOTFS
 
@@ -39,7 +39,7 @@ pacstrap -C work/pacman.conf -KMc $ROOTFS base linux linux-firmware grub \
 	
 # this use my custom repo for aur packages
 # setup your own custom repo if you wanna add packages from aur
-pacstrap -C work/pacman.conf -KMc $ROOTFS arc-gtk-theme openbox-theme-arcbox clipit obmenu-generator paper-icon-theme
+#pacstrap -C work/pacman.conf -KMc $ROOTFS arc-gtk-theme openbox-theme-arcbox clipit obmenu-generator paper-icon-theme
 
 # uncomment all mirrors
 sed -i 's/^#Server/Server/' $ROOTFS/etc/pacman.d/mirrorlist
